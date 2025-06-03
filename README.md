@@ -2,6 +2,8 @@
 
 A GitHub Action that updates your `README.md` with your current Rustlings exercise and progress table.
 
+![Screenshot](https://raw.githubusercontent.com/soda3x/rustlings-progress-action/refs/heads/main/screenshot.png)
+
 ## 🚀 Usage
 
 ```yaml
