@@ -51,6 +51,14 @@ echo "" >>README.md
 PERCENT=$(awk "BEGIN { printf \"%.1f\", ($DONE/$TOTAL)*100 }")
 
 echo "**$DONE of $TOTAL completed ($PERCENT%)**" >>README.md
+
+MAX_WIDTH=40
+FILL_COUNT=$((DONE * MAX_WIDTH / TOTAL))
+FILLED=$(printf "%0.s#" $(seq 1 $FILL_COUNT))
+CURRENT=">"
+EMPTY=$(printf "%0.s-" $(seq 1 $((MAX_WIDTH - FILL_COUNT - 1))))
+
+echo "[$FILLED$CURRENT$EMPTY]" >>README.md
 echo "" >>README.md
 
 echo "## 📋 Exercise Completion Table" >>README.md
